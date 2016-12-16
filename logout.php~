@@ -1,0 +1,16 @@
+<?php
+//destroy session
+
+require('./config.inc.php');
+
+$_SESSION = array();
+session_destroy();
+
+redirect_invalid_user();
+
+include('./header.html');
+
+echo '<h3>You are now logged out.</h3>';
+
+include('./footer.html');
+?>
